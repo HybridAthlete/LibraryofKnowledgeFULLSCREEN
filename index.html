@@ -1,36 +1,44 @@
-// Import the Botpress WebChat JavaScript file
-<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
- 
-// Initialize the Botpress WebChat with the required parameters
-<script>
-    window.botpressWebChat.init({
-        // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
-        "botId": "48410de6-a1b4-4214-bb8f-75658ebff95a",
-        "clientId": "48410de6-a1b4-4214-bb8f-75658ebff95a",
- 
-        // Set the URL for the Botpress WebChat JavaScript file and the messaging server
-        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-        "messagingUrl": "https://messaging.botpress.cloud",
- 
-        // Set the name of the bot that will be displayed in the WebChat interface
-        "botName": "The KOT BOT v.01 Test",
- 
-        // Set the width of the WebChat container and layout to 100% (Full Screen)
-        "containerWidth": "100%25",
-        "layoutWidth": "100%25",
- 
-        // Hide the widget and disable animations
-        "hideWidget": true,
-        "disableAnimations": true,
-    });
- 
-    // Opens up the Chatbot by default
-    // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
-    window.botpressWebChat.onEvent(
-        function () {
-            window.botpressWebChat.sendEvent({ type: "show" });
-        },
-        ["LIFECYCLE.LOADED"]
-    );
-</script>
- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="path_to_your_stylesheet.css">
+</head>
+
+<body>
+
+    <!-- Your HTML content goes here -->
+
+    <!-- Import the Botpress WebChat JavaScript file -->
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+
+    <!-- Initialize the Botpress WebChat with the required parameters -->
+    <script>
+        window.botpressWebChat.init({
+            "botId": "48410de6-a1b4-4214-bb8f-75658ebff95a",
+            "clientId": "48410de6-a1b4-4214-bb8f-75658ebff95a",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "botName": "The KOT BOT v.01 Test",
+            "containerWidth": "100%25",
+            "layoutWidth": "100%25",
+            "hideWidget": true,
+            "disableAnimations": true,
+        });
+
+        window.botpressWebChat.onEvent(
+            function () {
+                window.botpressWebChat.sendEvent({ type: "show" });
+            },
+            ["LIFECYCLE.LOADED"]
+        );
+    </script>
+
+</body>
+
+</html>
